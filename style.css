@@ -1,0 +1,165 @@
+/* Google Fonts (Montserrat & Fraunces) */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;600&display=swap');
+
+
+/* ## Colors
+
+### Primary
+
+- Dark cyan: hsl(158, 36%, 37%)
+- Cream: hsl(30, 38%, 92%)
+
+### Neutral
+
+- Very dark blue: hsl(212, 21%, 14%)
+- Dark grayish blue: hsl(228, 12%, 48%)
+- White: hsl(0, 0%, 100%) */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+p, .original-price {
+  color: hsl(228, 12%, 48%);
+}
+
+body {
+  background-color: hsl(30, 38%, 92%);
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 0.1px);
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.container div:first-child img {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.container div:last-child {
+  padding: 1rem 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: -1rem;
+}
+
+.container .product-tag {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-family: 'Fraunces', serif;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.container .product-details {
+  width: 30ch;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card-price {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-price .discounted-price {
+  font-size: 2rem;
+  font-family: 'Fraunces', serif;
+  color: hsl(158, 36%, 37%);
+}
+
+.add-button {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.625rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.add-button:hover {
+  background-color: hsl(157, 37%, 22%);
+}
+
+.attribution { 
+  margin-top: 2rem;
+  font-size: 11px; text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container div:first-child img {
+    border-radius: 0.5rem 0 0 0.5rem;
+    height: 100%;
+  }
+
+  .container div:last-child {
+    border-radius: 0  0.5rem 0.5rem 0;
+    margin-top: 0;
+  }
+
+  .container .product-tag {
+    margin: 1rem 0;
+  }
+
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container .product-details {
+    margin-bottom: 1.5rem;
+  }
+
+  .card-price {
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .card-price .discounted-price {
+    font-size: 2.5rem;
+  }
+
+}
